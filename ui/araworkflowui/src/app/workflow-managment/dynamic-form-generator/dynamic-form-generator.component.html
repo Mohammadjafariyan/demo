@@ -1,0 +1,116 @@
+<ng-template [ngIf]="inputs">
+  <div [formGroup]="formGroup">
+
+    <ng-template ngFor let-input [ngForOf]="inputs">
+      <input type="hidden"  hidden="hidden" readonly="readonly" [formControlName]="input.Name"   *ngIf="input.Type==inputType.Text">
+
+
+      <div class="form-group" *ngIf="input.Type==inputType.Text">
+        <label [for]="input.Name">{{input.FarsiName}}</label>
+        <input [formControlName]="input.Name" [attr.pattern]="input.Validation ? input.Validation.Regex: null"
+               [attr.minlength]="input.Validation ? input.Validation.MinLength : null"
+               [attr.maxlength]="input.Validation ?  input.Validation.MaxLength: null"
+               [attr.size]="input.Validation ?  input.Validation.Size: null"
+               [attr.required]="input.Validation ?  input.Validation.Required: null"
+               [attr.readonly]="input.Validation ?  input.Validation.Readonly: null"
+               type="text" class="form-control" [id]="input.Name" [name]="input.Name">
+      </div>
+
+      <div class="form-group" *ngIf="input.Type==inputType.Password">
+        <label [for]="input.Name">{{input.FarsiName}}</label>
+        <input [formControlName]="input.Name" [attr.pattern]="input.Validation ? input.Validation.Regex: null"
+               [attr.minlength]="input.Validation ? input.Validation.MinLength : null"
+               [attr.maxlength]="input.Validation ?  input.Validation.MaxLength: null"
+               [attr.size]="input.Validation ?  input.Validation.Size: null"
+               type="password" class="form-control" [id]="input.Name" [name]="input.Name">
+      </div>
+
+      <div class="form-group" *ngIf="input.Type==inputType.Email">
+        <label [for]="input.Name">{{input.FarsiName}}</label>
+        <input
+          [formControlName]="input.Name"
+          [attr.pattern]="input.Validation ? input.Validation.Regex: null"
+          [attr.minlength]="input.Validation ? input.Validation.MinLength : null"
+          [attr.maxlength]="input.Validation ?  input.Validation.MaxLength: null"
+          [attr.size]="input.Validation ?  input.Validation.Size: null"
+          type="Email" class="form-control" [id]="input.Name" [name]="input.Name">
+      </div>
+
+      <div class="form-group" *ngIf="input.Type==inputType.Number">
+        <label [for]="input.Name">{{input.FarsiName}}</label>
+        <input
+          [formControlName]="input.Name"
+          [attr.pattern]="input.Validation ? input.Validation.Regex: null"
+          [attr.minlength]="input.Validation ? input.Validation.MinLength : null"
+          [attr.maxlength]="input.Validation ?  input.Validation.MaxLength: null"
+          [attr.size]="input.Validation ?  input.Validation.Size: null"
+          type="Number" class="form-control" [id]="input.Name" [name]="input.Name">
+      </div>
+
+
+     <!-- <div class="form-group" *ngIf="input.Type==inputType.Select">
+        <label [for]="input.Name">{{input.FarsiName}}</label>
+        <input
+          [formControlName]="input.Name"
+
+          type="Number" class="form-control" [id]="input.Name" [name]="input.Name">
+      </div>-->
+
+
+      <div class="form-group" *ngIf="input.Type==inputType.Textarea">
+        <label [for]="input.Name">{{input.FarsiName}}</label>
+        <textarea           [formControlName]="input.Name"
+                             class="form-control" rows="5" [id]="input.Name" [name]="input.Name"></textarea>
+      </div>
+
+
+      <div class="checkbox" *ngIf="input.Type==inputType.Checkbox">
+        <label><input
+          [formControlName]="input.Name"
+          type="checkbox" [id]="input.Name" [name]="input.Name">{{input.FarsiName}}</label>
+      </div>
+
+      <div class="form-group" *ngIf="input.Type==inputType.Select">
+        <label [for]="input.Name">{{input.FarsiName}}:</label>
+        <select
+          [formControlName]="input.Name"
+          class="form-control" [id]="input.Name" [name]="input.Name">
+          <option *ngFor="let op of input.Options"
+                  [value]="op[input.OptionValueName]">{{op[input.OptionTextName]}}</option>
+        </select>
+      </div>
+
+
+      <ng-template [ngIf]="input.Type==inputType.Radio">
+        <div class="radio" *ngFor="let op of input.Options">
+          <label><input
+            [formControlName]="input.Name"
+            type="radio" [id]="input.Name" [name]="input.Name" [value]="op.Value"
+                        [attr.checked]="input.Value===op.Value">{{op.Name}}</label>
+        </div>
+      </ng-template>
+
+
+      <div *ngIf="input.Name.invalid && (input.Name.dirty || input.Name.touched)"
+           class="alert alert-danger">
+
+        <div *ngIf="input.Name.errors.required">
+          {{input.FarsiName}} ضروری است
+        </div>
+        <div *ngIf="input.Name.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+
+      </div>
+
+    </ng-template>
+
+
+
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="!inputs">
+
+  inputs is null from dynmaic form generator
+</ng-template>

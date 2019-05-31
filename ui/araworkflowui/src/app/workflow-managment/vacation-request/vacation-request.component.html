@@ -1,0 +1,32 @@
+<div class="container">
+
+  <h3 style="text-align: center">  فرم درخواست مرخصی</h3>
+  <form (submit)="onSubmit()">
+
+    <!--
+      <dynamic-primeng-form [group]="formGroup" [model]="formModel"></dynamic-primeng-form>
+    -->
+    <div class="form-group">
+      <label for="exampleInputEmail1" >عنوان مرخصی</label>
+      <input [(ngModel)]="model.name" name="name" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small  class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">نوع مرخصی</label>
+      <select [(ngModel)]="model.type"  name="type" class="form-control" id="exampleFormControlSelect1">
+        <option value="1">استحقاقی</option>
+        <option value="2">استعلاجی</option>
+        <option value="3">بدون حقوق</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">تعداد روز</label>
+      <input  [(ngModel)]="model.days"   name="days"  type="email" class="form-control"
+              aria-describedby="emailHelp" placeholder="تعداد روز ها را وارد نمایید">
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+
+    <input type="submit">
+  </form>
+
+</div>

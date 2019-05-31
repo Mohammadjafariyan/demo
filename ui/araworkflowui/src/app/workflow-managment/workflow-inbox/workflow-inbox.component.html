@@ -1,0 +1,88 @@
+<p-table
+  [value]="list" [paginator]="true" [rows]="10"
+  (onRowSelect)="onRowSelect($event)" selectionMode="single"
+  [(selection)]="selectedRec" dataKey="id" emptymessage="هیچ رکوردی وجود ندارد">
+
+  <ng-template pTemplate="caption">
+    لیست درخواست های واصله
+  </ng-template>
+
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th>id</th>
+      <th>assignee</th>
+      <th>createTime</th>
+      <th>delegationState</th>
+      <th>description</th>
+      <th>dueDate</th>
+      <th>execution</th>
+      <th>name</th>
+      <th>owner</th>
+      <th>processDefinition</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData">
+      <td>{{rowData['id']}}</td>
+      <td>{{rowData['assignee']}}</td>
+      <td>{{rowData['createTime']}}</td>
+      <td>{{rowData['delegationState']}}</td>
+      <td>{{rowData['description']}}</td>
+      <td>{{rowData['dueDate']}}</td>
+      <td>{{rowData['execution']}}</td>
+      <td>{{rowData['name']}}</td>
+      <td>{{rowData['owner']}}</td>
+      <td>{{rowData['processDefinition']}}</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage" >
+    <tr>
+      <td  colspan="8" style="text-align: center" >
+        هیچ رکوردی وجود ندارد
+      </td>
+    </tr>
+  </ng-template>
+
+<!--
+  <ng-template pTemplate="footer"  [pSelectableRow]="rowData">
+    <a [href]="" target="_blank" type="button" pButton icon="fa fa-check"  label="دیاگرام"></a>
+  </ng-template>-->
+</p-table>
+
+
+
+<div class="ui-rtl" dir="rtl">
+
+  <p-dialog  header="تایید" [(visible)]="displayDialog"
+             [responsive]="true" showEffect="fade" [modal]="true"
+             [style]="{ minWidth: '600px'}"
+             [maximizable]="true" [baseZIndex]="10000"
+             [closable]="true"
+  >
+
+    <p>آیا این مرخصی مورد تایید شما است ؟</p>
+
+    <br>
+    <select >
+      <option value="complete">complete</option>
+      <option value="claim" disabled="disabled" readonly="readonly">claim</option>
+      <option value="delegate" disabled="disabled" readonly="readonly">delegate</option>
+      <option value="resolve" disabled="disabled" readonly="readonly">resolve</option>
+
+    </select>
+    <br>
+
+
+    {{!dynaForm  ?  'فرم نال است':null }}
+
+    <p-footer>
+      <div class="ui-dialog-buttonpane ui-helper-clearfix">
+        <button type="button" pButton icon="fa fa-check" (click)="accept(null)" label="تایید"></button>
+        <button type="button" pButton icon="fa fa-close" (click)="reject(null)" label="رد"></button>
+      </div>
+    </p-footer>
+  </p-dialog>
+</div>
+
+
+
