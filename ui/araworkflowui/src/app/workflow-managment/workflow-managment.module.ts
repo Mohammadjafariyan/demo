@@ -16,12 +16,14 @@ import {PersonnelComponent} from './personnel/personnel.component';
 import {BaseCRUDService} from "./services/base-crud.service";
 import {GroupComponent} from './group/group.component';
 import {DynamicFormGeneratorComponent} from "./dynamic-form-generator/dynamic-form-generator.component";
+import { MyInFlowRequestsComponent } from './my-in-flow-requests/my-in-flow-requests.component';
+import { MyHistoryComponent } from './my-history/my-history.component';
 
 @NgModule({
   declarations: [LayoutComponent, WorkflowsComponent
     , BaseCRUDComponent, VacationRequestComponent,
     WorkflowInboxComponent, PersonnelComponent, GroupComponent,
-    DynamicFormGeneratorComponent, BaseCRUDComponent],
+    DynamicFormGeneratorComponent, BaseCRUDComponent, MyInFlowRequestsComponent, MyHistoryComponent],
   imports: [
     CommonModule,
     FormsModule,

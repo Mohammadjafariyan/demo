@@ -31,12 +31,10 @@ export class PersonnelComponent implements OnInit {
 
   generateForm() {
     this.inputs = [
-      new MyInput(0, 'id', 'id', 0, InputType.Text),
-      new MyInput(0, 'firstName', 'firstName', '', InputType.Text),
-      new MyInput(0, 'lastName', 'lastName', '', InputType.Text),
-      new MyInput(0, 'url', 'url', '', InputType.Text),
-      new MyInput(0, 'email', 'email', '', InputType.Text),
-      new MyInput(0, 'password', 'password', '', InputType.Text),
+      new MyInput(0, 'id', 'نام کاربری', 0, InputType.Text),
+      new MyInput(0, 'firstName', 'نام', '', InputType.Text),
+      new MyInput(0, 'lastName', 'نام خانوادگی', '', InputType.Text),
+      new MyInput(0, 'password', 'رمز عبور', '', InputType.Text),
     ]
   }
 }

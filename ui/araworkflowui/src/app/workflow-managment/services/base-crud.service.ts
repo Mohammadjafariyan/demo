@@ -2,13 +2,14 @@ import {Inject, Injectable} from '@angular/core';
 import {HttpClient, HttpEvent} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {ResultViewModel} from "../base-crud/base-crud.component";
+import {AuthHolder} from "../../auth.guard";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BaseCRUDService {
 
-  public static BaseUrl='http://localhost:8090/';
+  public static BaseUrl=`http://${AuthHolder.username}:${AuthHolder.username}@localhost:8090/`;
 
   constructor(protected http: HttpClient) {
   }
@@ -31,6 +32,10 @@ export class BaseCRUDService {
 
   get<T>(url: string): Observable<T> {
     return this.http.get<T>(url);
+  }
+
+  getBlob(url: string,param:any): Observable<ArrayBuffer> {
+    return this.http.get(url,param);
   }
 
   postG<T>(readUrl: any, model: any): Observable<T> {

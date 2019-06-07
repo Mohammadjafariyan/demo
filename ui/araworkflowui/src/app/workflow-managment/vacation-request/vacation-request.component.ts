@@ -1,35 +1,34 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup} from "@angular/forms";
 import {AuthHolder} from "../../auth.guard";
 import {BaseCRUDService} from "../services/base-crud.service";
 import {Router} from "@angular/router";
 
 
-  export class StartProcessRequestVariable {
-    name: string;
-    value: string;
-  }
+export class StartProcessRequestVariable {
+  name: string;
+  value: string;
+}
 
-  export class StartProcessRequest {
-    processDefinitionId: string;
-    businessKey: string;
-    processDefinitionKey;
-    variables: StartProcessRequestVariable[];
-  }
+export class StartProcessRequest {
+  processDefinitionId: string;
+  businessKey: string;
+  processDefinitionKey;
+  variables: StartProcessRequestVariable[];
+}
 
 
+export class StartProcessResponseVariable {
+  name: string;
+  value: string;
+}
 
-  export class StartProcessResponseVariable {
-    name: string;
-    value: string;
-  }
-
-  export class StartProcessResponse {
-    processDefinitionKey: string;
-    businessKey: string;
-    tenantId: string;
-    variables: StartProcessResponseVariable[];
-  }
+export class StartProcessResponse {
+  processDefinitionKey: string;
+  businessKey: string;
+  tenantId: string;
+  variables: StartProcessResponseVariable[];
+}
 
 
 @Component({
@@ -39,32 +38,47 @@ import {Router} from "@angular/router";
 })
 export class VacationRequestComponent implements OnInit {
 
-  model: VacationRequest = new VacationRequest();
+
+  @Input()
+  disabled;
+  @Input()
+  model: VacationRequest;
   //formModel: DynamicFormModel = MY_FORM_MODEL;
   formGroup: FormGroup;
 
 
-
-  constructor(private service: BaseCRUDService ,
-              private router:Router) {
+  constructor(private service: BaseCRUDService,
+              private router: Router) {
   }
 
   ngOnInit() {
 
+    if (!this.model) {
+      this.model = new VacationRequest()
+    }
 
   }
 
-  onSubmit(){
+  onSubmit() {
 
-    const m=new StartProcessRequest();
-    m.processDefinitionKey='vactionRequest';
+    const m = new StartProcessRequest();
+    m.processDefinitionKey = 'vacationRequest';
+
+    m.variables = [{
+      name: 'vacationType', value: this.model.type
+
+    }, {
+      name: 'days', value: this.model.days
+    }
+      ,
+      {
+        name: 'title', value: this.model.name
+      }]
 
     this.service.postG<StartProcessResponse>
-    (BaseCRUDService.BaseUrl + 'runtime/process-instances',m).toPromise().then(res => {
+    (BaseCRUDService.BaseUrl + 'runtime/process-instances', m).toPromise().then(res => {
       this.router.navigate(['/wm/inbox']);
     });
-
-
 
 
   }
@@ -76,9 +90,6 @@ export class VacationRequest {
   date: Date;
   days;
 }
-
-
-
 
 
 /*

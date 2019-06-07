@@ -1,6 +1,7 @@
 <p-table
   [value]="list" [paginator]="true" [rows]="10"
   (onRowSelect)="onRowSelect($event)" selectionMode="single"
+
   [(selection)]="selectedRec" dataKey="id" emptymessage="هیچ رکوردی وجود ندارد">
 
   <ng-template pTemplate="caption">
@@ -9,27 +10,23 @@
 
   <ng-template pTemplate="header" let-columns>
     <tr>
-      <th>id</th>
-      <th>assignee</th>
-      <th>createTime</th>
-      <th>delegationState</th>
-      <th>description</th>
-      <th>dueDate</th>
-      <th>execution</th>
-      <th>name</th>
-      <th>owner</th>
-      <th>processDefinition</th>
+      <th>کد</th>
+      <th>انجام شده از طرف</th>
+      <th>تاریخ ایجاد</th>
+      <th>وضعیت ارجاع</th>
+      <th>توضیحات</th>
+      <th>نام</th>
+      <th>درخواست کننده</th>
+      <th>گردش کار</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowData let-columns="columns">
     <tr [pSelectableRow]="rowData">
       <td>{{rowData['id']}}</td>
       <td>{{rowData['assignee']}}</td>
-      <td>{{rowData['createTime']}}</td>
+      <td>{{rowData['createTime'] | date:'short'}}</td>
       <td>{{rowData['delegationState']}}</td>
       <td>{{rowData['description']}}</td>
-      <td>{{rowData['dueDate']}}</td>
-      <td>{{rowData['execution']}}</td>
       <td>{{rowData['name']}}</td>
       <td>{{rowData['owner']}}</td>
       <td>{{rowData['processDefinition']}}</td>
@@ -54,31 +51,51 @@
 <div class="ui-rtl" dir="rtl">
 
   <p-dialog  header="تایید" [(visible)]="displayDialog"
-             [responsive]="true" showEffect="fade" [modal]="true"
-             [style]="{ minWidth: '600px'}"
+            showEffect="fade" [modal]="true"
+[responsive]="true"
+             [width]="1000"
+             [rtl]="true"
+             [resizable]="true"
              [maximizable]="true" [baseZIndex]="10000"
              [closable]="true"
   >
 
-    <p>آیا این مرخصی مورد تایید شما است ؟</p>
 
-    <br>
-    <select >
-      <option value="complete">complete</option>
-      <option value="claim" disabled="disabled" readonly="readonly">claim</option>
-      <option value="delegate" disabled="disabled" readonly="readonly">delegate</option>
-      <option value="resolve" disabled="disabled" readonly="readonly">resolve</option>
+    <div class="container ss" style="padding: 60px;">
+      <h4 style="text-align: center">آیا این مرخصی مورد تایید شما است ؟</h4>
 
-    </select>
-    <br>
+      <hr/>
+      <app-vacation-request [disabled]="true" *ngIf="vacation" [model]="vacation"></app-vacation-request>
+
+      <hr/>
+
+      <img [src]="imageToShow"
+           alt="Place image title"
+           *ngIf="imageToShow">
+      <ng-template *ngIf="!imageToShow">
+        <img src="fallbackImage.png" alt="Fallbackimage">
+      </ng-template>
 
 
-    {{!dynaForm  ?  'فرم نال است':null }}
+      <label style="text-align: right;color:darkblue" ><b>قصد انجام چه عملیاتی را دارید ؟</b></label>
+      <select [(ngModel)]="actionType" class="form-control">
+        <option selected="selected" value="none"  disabled="disabled" readonly="readonly">لطفا عملیات دلخواه خود را انتخاب نمایید</option>
+        <option value="complete" style="color:green;font-weight: bold">انجام شد</option>
+        <option value="claim" disabled="disabled" readonly="readonly">بدست گرفتن</option>
+        <option value="delegate" disabled="disabled" readonly="readonly">ارجاع</option>
+        <option value="resolve"  disabled="disabled" readonly="readonly">انجام بجا</option>
+
+      </select>
+      <br>
+    </div>
+
+
 
     <p-footer>
       <div class="ui-dialog-buttonpane ui-helper-clearfix">
         <button type="button" pButton icon="fa fa-check" (click)="accept(null)" label="تایید"></button>
         <button type="button" pButton icon="fa fa-close" (click)="reject(null)" label="رد"></button>
+        <button type="button" pButton icon="fa fa-eye" (click)="preview()" label="نمایش"></button>
       </div>
     </p-footer>
   </p-dialog>
