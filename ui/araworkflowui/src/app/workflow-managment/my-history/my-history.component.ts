@@ -10,10 +10,9 @@ import {BaseCRUDService} from "../services/base-crud.service";
 })
 export class MyHistoryComponent implements OnInit {
   list: Historic[];
-
   constructor(private service: BaseCRUDService) {
   }
-
+  selectedRec:Historic;
   displayDialog;
 
   ngOnInit() {
@@ -22,5 +21,20 @@ export class MyHistoryComponent implements OnInit {
     ).toPromise().then(res => {
       this.list = res.data;
     });
+  }
+
+
+
+  preview() {
+    /*this.service.getBlob(BaseCRUDService.BaseUrl +
+      `runtime/process-instances/${this.selectedRec..processInstanceId}/diagram`
+      , {responseType: 'blob'}).toPromise().then(res => {
+      //  this.list = res.data;
+
+      const blob = new Blob([res], {type: 'image/png'})
+
+      this.createImageFromBlob(blob);
+    });*/
+
   }
 }

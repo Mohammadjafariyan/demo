@@ -9,7 +9,8 @@ import {AuthHolder} from "../../auth.guard";
 })
 export class BaseCRUDService {
 
-  public static BaseUrl=`http://${AuthHolder.username}:${AuthHolder.username}@localhost:8090/`;
+  public static BaseUrl=AuthHolder.username ?
+    `http://${AuthHolder.username}:${AuthHolder.username}@localhost:8090/` : 'http://localhost:8090/';
 
   constructor(protected http: HttpClient) {
   }

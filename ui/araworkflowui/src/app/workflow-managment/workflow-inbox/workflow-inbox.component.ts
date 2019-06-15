@@ -16,13 +16,17 @@ export class WorkflowInboxComponent implements OnInit {
   selectedRec;
   list;
   vacation: VacationRequest;
-   selectedTask: Task;
-   imageToShow: any;
+  selectedTask: Task;
+  imageToShow: any;
 
   constructor(private service: BaseCRUDService) {
   }
 
   displayDialog;
+
+  onClose() {
+    this.ngOnInit();
+  }
 
   ngOnInit() {
     this.service.get<ProcessDefinitionGrid>(
@@ -33,10 +37,10 @@ export class WorkflowInboxComponent implements OnInit {
 
   }
 
-  preview(){
+  preview() {
     this.service.getBlob(BaseCRUDService.BaseUrl +
-      `runtime/process-instances/${this.selectedTask.executionId}/diagram`
-      ,{ responseType: 'blob' }).toPromise().then(res => {
+      `runtime/process-instances/${this.selectedTask.processInstanceId}/diagram`
+      , {responseType: 'blob'}).toPromise().then(res => {
       //  this.list = res.data;
 
       const blob = new Blob([res], {type: 'image/png'})
@@ -62,10 +66,10 @@ export class WorkflowInboxComponent implements OnInit {
   onRowSelect(e: any) {
 
     this.vacation = new VacationRequest();
-    this.vacation.type = e.data.variables.find(s=>s.name=="vacationType").value;
-    this.vacation.name = e.data.variables.find(s=>s.name=="title").value;
-    this.vacation.days = e.data.variables.find(s=>s.name=="days").value;
-    this.selectedTask=e.data;
+    this.vacation.type = e.data.variables.find(s => s.name == "vacationType").value;
+    this.vacation.name = e.data.variables.find(s => s.name == "title").value;
+    this.vacation.days = e.data.variables.find(s => s.name == "days").value;
+    this.selectedTask = e.data;
 
 
     this.displayDialog = true;
@@ -74,22 +78,22 @@ export class WorkflowInboxComponent implements OnInit {
   actionType = "none";
 
   accept(e) {
-    if(this.actionType=='none'){
+    if (this.actionType == 'none') {
       alert('لطفا عملیات مورد نظر خود را انتخاب نمایید');
       return;
     }
 
     const d = {
-      "action":this.actionType,
+      "action": this.actionType,
       "variables": [
-        {name:'isApproved',value:'true'}
+        {name: 'isApproved', value: 'true'}
       ]
     };
     this.service.postG<TaskRoot>(BaseCRUDService.BaseUrl +
       `runtime/tasks/${this.selectedTask.id}`
       , d
     ).toPromise().then(res => {
-    //  this.list = res.data;
+      //  this.list = res.data;
 
       this.ngOnInit();
 

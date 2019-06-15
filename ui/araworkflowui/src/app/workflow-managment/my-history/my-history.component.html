@@ -1,6 +1,9 @@
 <p-table
   [value]="list" [paginator]="true" [rows]="10"
   selectionMode="single"
+
+  [(selection)]="selectedRec"
+
   dataKey="id" emptymessage="هیچ رکوردی وجود ندارد">
 
   <ng-template pTemplate="caption">
@@ -36,3 +39,43 @@
       <a [href]="" target="_blank" type="button" pButton icon="fa fa-check"  label="دیاگرام"></a>
     </ng-template>-->
 </p-table>
+
+
+
+
+<div class="ui-rtl" dir="rtl">
+
+  <p-dialog  header="تایید" [(visible)]="displayDialog"
+             showEffect="fade" [modal]="true"
+             [responsive]="true"
+             [width]="1000"
+             [rtl]="true"
+             [resizable]="true"
+             [maximizable]="true" [baseZIndex]="10000"
+             [closable]="true"
+  >
+
+
+    <div class="container ss" style="padding: 60px;">
+      <h4 style="text-align: center">تاریخچه گردش کار مرخصی </h4>
+
+
+      <img [src]="imageToShow"
+           alt="Place image title"
+           *ngIf="imageToShow">
+      <ng-template *ngIf="!imageToShow">
+        <img src="fallbackImage.png" alt="Fallbackimage">
+      </ng-template>
+
+
+    </div>
+
+
+
+    <p-footer>
+      <div class="ui-dialog-buttonpane ui-helper-clearfix">
+        <button type="button" pButton icon="fa fa-eye" (click)="preview()" label="نمایش"></button>
+      </div>
+    </p-footer>
+  </p-dialog>
+</div>

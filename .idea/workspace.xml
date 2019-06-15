@@ -6,28 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7bee31c-2987-4531-85b5-44e780d11b08" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/assets/primeicons/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/assets/primeicons/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/assets/primeicons/fonts/primeicons.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/assets/primeicons/fonts/primeicons.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/assets/primeicons/fonts/primeicons.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/assets/primeicons/fonts/primeicons.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/assets/primeicons/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/assets/primeicons/primeicons.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/processes/vactionRequest.bpmn20.xml" afterPath="$PROJECT_DIR$/src/main/resources/processes/vactionRequest.bpmn20.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/processes/vactionRequest.bpmn20.xml" afterPath="$PROJECT_DIR$/target/classes/processes/vactionRequest.bpmn20.xml" />
-      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/app.component.html" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/app.component.html" />
-      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/personnel/personnel.component.ts" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/personnel/personnel.component.ts" />
+      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.html" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.html" />
+      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.ts" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.ts" />
       <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/services/base-crud.service.ts" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/services/base-crud.service.ts" />
-      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/vacation-request/vacation-request.component.html" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/vacation-request/vacation-request.component.html" />
-      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/vacation-request/vacation-request.component.ts" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/vacation-request/vacation-request.component.ts" />
-      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.css" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.css" />
       <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.html" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.html" />
       <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.ts" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.ts" />
-      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-managment-routing.module.ts" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-managment-routing.module.ts" />
-      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-managment.module.ts" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-managment.module.ts" />
-      <change beforePath="$PROJECT_DIR$/ui/araworkflowui/src/index.html" afterPath="$PROJECT_DIR$/ui/araworkflowui/src/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,9 +29,11 @@
       <file leaf-file-name="my-in-flow-requests.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-in-flow-requests/my-in-flow-requests.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="-286">
+              <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,8 +54,8 @@
       <file leaf-file-name="my-history.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            <state relative-caret-position="88">
+              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#0;n#ng-template#3;n#p-table#0;n#!!top" expanded="true" />
               </folding>
@@ -75,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-history.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="my-history.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="20" column="109" lean-forward="false" selection-start-line="20" selection-start-column="109" selection-end-line="20" selection-end-column="109" />
+            <state relative-caret-position="484">
+              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="36" selection-end-column="9" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -91,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-managment-routing.module.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+              <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -100,28 +88,28 @@
       <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/login/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="528">
               <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/app.component.ts">
+      <file leaf-file-name="workflow-inbox.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="110">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.guard.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/auth.guard.ts">
+      <file leaf-file-name="workflow-inbox.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="88">
+              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -130,8 +118,8 @@
       <file leaf-file-name="base-crud.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/services/base-crud.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="11" column="78" lean-forward="false" selection-start-line="11" selection-start-column="78" selection-end-line="11" selection-end-column="78" />
+            <state relative-caret-position="176">
+              <caret line="12" column="100" lean-forward="false" selection-start-line="12" selection-start-column="100" selection-end-line="12" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -141,7 +129,7 @@
         <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-in-flow-requests/my-in-flow-requests.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <caret line="8" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#0;n#ng-template#3;n#p-table#0;n#!!top" expanded="true" />
               </folding>
@@ -173,6 +161,9 @@
       <find>BASE_URL</find>
       <find>StartProcessRequestNamespace</find>
       <find>userTask</find>
+      <find>boundary</find>
+      <find>PT</find>
+      <find>sid-75D58037-73ED-46B3-8DAD-54A1B9280103</find>
     </findStrings>
     <replaceStrings>
       <replace>.id</replace>
@@ -231,13 +222,13 @@
         <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.css" />
         <option value="$PROJECT_DIR$/ui/araworkflowui/src/index.html" />
         <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/vacation-request/vacation-request.component.ts" />
-        <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.ts" />
         <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-in-flow-requests/my-in-flow-requests.component.html" />
-        <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.html" />
-        <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/services/base-crud.service.ts" />
         <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-in-flow-requests/my-in-flow-requests.component.ts" />
         <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-managment-routing.module.ts" />
         <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/services/base-crud.service.ts" />
+        <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.html" />
+        <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.ts" />
         <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.html" />
         <option value="$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.ts" />
       </list>
@@ -283,7 +274,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -294,6 +288,32 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="processes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -301,21 +321,6 @@
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="primeicons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -331,15 +336,6 @@
               <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -349,16 +345,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="workflow-managment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="workflow-managment" type="462c0819:PsiDirectoryNode" />
-              <item name="base-crud" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -378,92 +364,52 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="workflow-managment" type="462c0819:PsiDirectoryNode" />
-              <item name="my-in-flow-requests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="workflow-managment" type="462c0819:PsiDirectoryNode" />
-              <item name="personnel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="workflow-managment" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="workflow-managment" type="462c0819:PsiDirectoryNode" />
-              <item name="vacation-request" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="workflow-managment" type="462c0819:PsiDirectoryNode" />
               <item name="workflow-inbox" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="workflow-managment" type="462c0819:PsiDirectoryNode" />
-              <item name="workflows" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="primeicons" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="araworkflowui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="primeicons" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="sp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -616,11 +562,13 @@
       <workItem from="1559280803983" duration="13942000" />
       <workItem from="1559299640860" duration="4145000" />
       <workItem from="1559903911793" duration="17177000" />
+      <workItem from="1560442025493" duration="3452000" />
+      <workItem from="1560604882934" duration="2702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51765000" />
+    <option name="totallyTimeSpent" value="57919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -672,13 +620,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../AraWorkflowEngine/AraWorkflow/ClientApp/src/app/personnel/personnel.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../AraWorkflowEngine/AraWorkflow/ClientApp/src/app/personnel/personnel.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -725,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -770,9 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-132">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#63#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -862,28 +798,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/processes/vactionRequest.bpmn20.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="111" column="14" lean-forward="false" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
-          <folding>
-            <marker date="1559916489616" expanded="true" signature="157:9255" ph="..." />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,7 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-178">
           <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,7 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,17 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="64" column="41" lean-forward="false" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -933,9 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-374">
           <caret line="38" column="37" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -943,70 +847,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#0;n#ng-template#3;n#p-table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#p-dialog#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#p-dialog#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#p-dialog#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#option#1;n#select#0;n#div#0;n#p-dialog#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/auth.guard.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="616">
           <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/services/base-crud.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="78" lean-forward="false" selection-start-line="11" selection-start-column="78" selection-end-line="11" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-in-flow-requests/my-in-flow-requests.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-managment-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+          <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -1025,30 +886,84 @@
     <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-in-flow-requests/my-in-flow-requests.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#ng-template#3;n#p-table#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/processes/_____________.bpmn20 (4).xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/processes/vactionRequest.bpmn20.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/services/base-crud.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="12" column="100" lean-forward="false" selection-start-line="12" selection-start-column="100" selection-end-line="12" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state relative-caret-position="88">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#ng-template#3;n#p-table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-in-flow-requests/my-in-flow-requests.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-286">
+          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/my-history/my-history.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="20" column="109" lean-forward="false" selection-start-line="20" selection-start-column="109" selection-end-line="20" selection-end-column="109" />
+        <state relative-caret-position="484">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="36" selection-end-column="9" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/araworkflowui/src/app/workflow-managment/workflow-inbox/workflow-inbox.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

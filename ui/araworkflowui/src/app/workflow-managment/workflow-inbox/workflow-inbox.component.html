@@ -52,6 +52,7 @@
 
   <p-dialog  header="تایید" [(visible)]="displayDialog"
             showEffect="fade" [modal]="true"
+             (onHide)="onClose()"
 [responsive]="true"
              [width]="1000"
              [rtl]="true"
