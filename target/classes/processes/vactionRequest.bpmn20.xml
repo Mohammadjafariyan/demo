@@ -2,7 +2,7 @@
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
   <process id="vacationRequest" name="درخواست مرخصی" isExecutable="true">
     <startEvent id="startEvent1"></startEvent>
-    <userTask id="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673" name="request survey" activiti:assignee="secretary">
+    <userTask id="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673" name="درخواست بررسی" activiti:assignee="secretary">
       <extensionElements>
         <activiti:formProperty id="vacationType" name="vacationType" type="string" variable="vacationType" required="true"></activiti:formProperty>
         <activiti:formProperty id="title" type="string" variable="title"></activiti:formProperty>
@@ -13,13 +13,13 @@
     <sequenceFlow id="sid-6B3A35C6-93B3-4FAA-962F-A0D080A48FA8" sourceRef="startEvent1" targetRef="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673"></sequenceFlow>
     <exclusiveGateway id="sid-1757BCD1-8F0C-4B3C-AD1E-F7315BFE15F4"></exclusiveGateway>
     <sequenceFlow id="sid-58CA2F16-A01D-4DED-89FC-89BABB77A2DF" sourceRef="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673" targetRef="sid-1757BCD1-8F0C-4B3C-AD1E-F7315BFE15F4"></sequenceFlow>
-    <userTask id="sid-B6451BFB-B586-433B-823E-41B9FAB685DE" name="accountants" activiti:assignee="accountants">
+    <userTask id="sid-B6451BFB-B586-433B-823E-41B9FAB685DE" name="حسابدار" activiti:assignee="accountants">
       <extensionElements>
         <activiti:formProperty id="isApproved" name="isApproved" type="string" variable="isApproved"></activiti:formProperty>
         <modeler:initiator-can-complete xmlns:modeler="http://activiti.com/modeler"><![CDATA[false]]></modeler:initiator-can-complete>
       </extensionElements>
     </userTask>
-    <userTask id="sid-75D58037-73ED-46B3-8DAD-54A1B9280103" name="ceo" activiti:assignee="ceo">
+    <userTask id="sid-75D58037-73ED-46B3-8DAD-54A1B9280103" name="مدیریت" activiti:assignee="ceo">
       <extensionElements>
         <modeler:initiator-can-complete xmlns:modeler="http://activiti.com/modeler"><![CDATA[false]]></modeler:initiator-can-complete>
       </extensionElements>
@@ -41,7 +41,7 @@
     <sequenceFlow id="sid-FEE7F031-8580-4EA6-9587-501AF5F3A4C0" sourceRef="sid-D1294399-FCEA-4F4B-8D35-699879458D33" targetRef="sid-75D58037-73ED-46B3-8DAD-54A1B9280103">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${isApproved==true}]]></conditionExpression>
     </sequenceFlow>
-    <userTask id="sid-FA955242-06A0-497C-A2D4-654D5B08A38E" name="successor" activiti:assignee="successor">
+    <userTask id="sid-FA955242-06A0-497C-A2D4-654D5B08A38E" name="جانشین" activiti:assignee="successor">
       <extensionElements>
         <modeler:initiator-can-complete xmlns:modeler="http://activiti.com/modeler"><![CDATA[false]]></modeler:initiator-can-complete>
       </extensionElements>
