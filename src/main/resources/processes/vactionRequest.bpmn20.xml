@@ -2,11 +2,12 @@
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
   <process id="vacationRequest" name="درخواست مرخصی" isExecutable="true">
     <startEvent id="startEvent1"></startEvent>
-    <userTask id="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673" name="درخواست بررسی" activiti:assignee="secretary">
+    <userTask id="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673" name="درخواست بررسی" activiti:assignee="${upper}">
       <extensionElements>
         <activiti:formProperty id="vacationType" name="vacationType" type="string" variable="vacationType" required="true"></activiti:formProperty>
         <activiti:formProperty id="title" type="string" variable="title"></activiti:formProperty>
         <activiti:formProperty id="days" type="long" variable="days"></activiti:formProperty>
+        <activiti:formProperty id="upper" name="upper" type="string" variable="upper" required="true"></activiti:formProperty>
         <modeler:initiator-can-complete xmlns:modeler="http://activiti.com/modeler"><![CDATA[false]]></modeler:initiator-can-complete>
       </extensionElements>
     </userTask>
@@ -19,8 +20,10 @@
         <modeler:initiator-can-complete xmlns:modeler="http://activiti.com/modeler"><![CDATA[false]]></modeler:initiator-can-complete>
       </extensionElements>
     </userTask>
-    <userTask id="sid-75D58037-73ED-46B3-8DAD-54A1B9280103" name="مدیریت" activiti:assignee="ceo">
+    <userTask id="sid-75D58037-73ED-46B3-8DAD-54A1B9280103" name="مدیریت" activiti:assignee="ceo" activiti:formKey="vacationRequestVerification">
       <extensionElements>
+        <activiti:formProperty id="label" name="label" type="string" variable="label"></activiti:formProperty>
+        <activiti:formProperty id="select" name="select" type="enum" variable="select"></activiti:formProperty>
         <modeler:initiator-can-complete xmlns:modeler="http://activiti.com/modeler"><![CDATA[false]]></modeler:initiator-can-complete>
       </extensionElements>
     </userTask>
@@ -90,7 +93,7 @@
         <omgdc:Bounds height="28.0" width="28.0" x="645.0" y="405.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="sid-740E5ABD-8AD0-4D39-93C6-4183FF5283E8" id="BPMNShape_sid-740E5ABD-8AD0-4D39-93C6-4183FF5283E8">
-        <omgdc:Bounds height="31.0" width="31.0" x="358.7559908450961" y="285.990073999032"></omgdc:Bounds>
+        <omgdc:Bounds height="31.0" width="31.0" x="343.2559908450961" y="270.490073999032"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="sid-58CA2F16-A01D-4DED-89FC-89BABB77A2DF" id="BPMNEdge_sid-58CA2F16-A01D-4DED-89FC-89BABB77A2DF">
         <omgdi:waypoint x="265.0" y="162.38095238095238"></omgdi:waypoint>
@@ -102,7 +105,7 @@
         <omgdi:waypoint x="360.0" y="70.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="sid-1682F701-FA27-4AF6-B478-822ED5F3D657" id="BPMNEdge_sid-1682F701-FA27-4AF6-B478-822ED5F3D657">
-        <omgdi:waypoint x="370.59004822806435" y="317.438210524568"></omgdi:waypoint>
+        <omgdi:waypoint x="359.2747595939756" y="301.48139024346995"></omgdi:waypoint>
         <omgdi:waypoint x="361.0" y="353.0"></omgdi:waypoint>
         <omgdi:waypoint x="365.0" y="353.0"></omgdi:waypoint>
         <omgdi:waypoint x="365.0" y="390.0"></omgdi:waypoint>
@@ -130,8 +133,8 @@
         <omgdi:waypoint x="165.0" y="160.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="sid-CBEDE3C7-3AD3-4718-BE3B-1DFE50332A8A" id="BPMNEdge_sid-CBEDE3C7-3AD3-4718-BE3B-1DFE50332A8A">
-        <omgdi:waypoint x="445.63829787234044" y="305.0"></omgdi:waypoint>
-        <omgdi:waypoint x="473.5" y="359.0"></omgdi:waypoint>
+        <omgdi:waypoint x="445.4255319148936" y="305.0"></omgdi:waypoint>
+        <omgdi:waypoint x="473.0" y="359.0"></omgdi:waypoint>
         <omgdi:waypoint x="645.0" y="359.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="sid-AF09F389-80ED-4A54-8D87-50AD4F6BB575" id="BPMNEdge_sid-AF09F389-80ED-4A54-8D87-50AD4F6BB575">

@@ -45,6 +45,7 @@ export class VacationRequestComponent implements OnInit {
   model: VacationRequest;
   //formModel: DynamicFormModel = MY_FORM_MODEL;
   formGroup: FormGroup;
+  upperLevel: any;
 
 
   constructor(private service: BaseCRUDService,
@@ -56,6 +57,11 @@ export class VacationRequestComponent implements OnInit {
     if (!this.model) {
       this.model = new VacationRequest()
     }
+
+    this.service.get<string>
+    (`http://re92p16o446r2t.aminrayaneh.ir/ticket/personel.php?username=${AuthHolder.username}`).toPromise().then(res => {
+      this.upperLevel = res['username'];
+    });
 
   }
 
@@ -73,7 +79,11 @@ export class VacationRequestComponent implements OnInit {
       ,
       {
         name: 'title', value: this.model.name
-      }]
+      },
+      {
+        name: 'upper', value: this.upperLevel
+      }
+    ];
 
     this.service.postG<StartProcessResponse>
     (BaseCRUDService.BaseUrl + 'runtime/process-instances', m).toPromise().then(res => {
