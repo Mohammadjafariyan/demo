@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="processEngineConfiguration"
+          class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+
+        <property name="databaseType" value="mssql" />
+        <property name="jdbcUrl" value="jdbc:sqlserver://localhost\SQLEXPRESS:1433;database=workflow" />
+        <property name="jdbcDriver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+        <property name="jdbcUsername" value="sa2" />
+        <property name="jdbcPassword" value="sa2" />
+
+
+        <!-- <property name="dataSource" ref="dataSource" /> -->
+
+        <!-- Database configurations -->
+        <property name="databaseSchemaUpdate" value="true" />
+
+        <!-- job executor configurations -->
+        <property name="jobExecutorActivate" value="true" />
+
+        <property name="createDiagramOnDeploy" value="false" />
+
+    </bean>
+
+</beans>

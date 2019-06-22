@@ -12,7 +12,7 @@ public class HomeController {
     @GetMapping("/")
     public String Index(){
 
-      //  return "sp/index";
+      //  return "templates/sp/index";
         return "forward:/index.html";
     }
 }
