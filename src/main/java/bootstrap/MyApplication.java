@@ -3,6 +3,8 @@ package bootstrap;
 import org.activiti.engine.*;
 import org.activiti.engine.identity.User;
 import org.activiti.spring.SpringProcessEngineConfiguration;
+import org.apache.ibatis.datasource.DataSourceFactory;
+import org.apache.ibatis.datasource.jndi.JndiDataSourceFactory;
 import org.apache.log4j.Logger;
 import org.apache.log4j.spi.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -17,9 +19,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 
+import javax.sql.DataSource;
 import java.util.Properties;
 
-import javax.sql.DataSource;
 
 /*
 @Configuration
@@ -33,12 +35,15 @@ import javax.sql.DataSource;
 public class MyApplication {
     private static final Logger LOGGER = Logger.getLogger(MyApplication.class); // LoggerFactory.getLogger(MyApplication.class.getName());
 
+    private DataSourceFactory dataSourceFactory =new JndiDataSourceFactory();
+
     @Bean
     @Primary
     @Qualifier
     public DataSource processEngineConfiguration() throws Exception {
         // ProcessEngine processEngine = ProcessEngineConfiguration
         // .createProcessEngineConfigurationFromResource("activiti.cfg.xml").buildProcessEngine();
+
 
         SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
         dataSource.setDriverClass(com.microsoft.sqlserver.jdbc.SQLServerDriver.class);

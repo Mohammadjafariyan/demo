@@ -26,7 +26,7 @@ public class MyConfig {
         LOGGER.warn("::::::::::properties path::::::> " + new File(".").getAbsolutePath());
         LOGGER.error("::::::::::properties path::::::> " + new File(".").getAbsolutePath());
 
-        path = new File(".").getAbsolutePath() + "\\application.properties";
+        path = new File(".").getAbsolutePath() + "\\db.properties";
 
         File file = ResourceUtils.getFile(path);
         InputStream in = new FileInputStream(file);
