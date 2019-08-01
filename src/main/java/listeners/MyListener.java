@@ -1,6 +1,7 @@
 package listeners;
 
 import org.activiti.engine.delegate.DelegateTask;
+import org.activiti.engine.delegate.Expression;
 import org.activiti.engine.delegate.TaskListener;
 import org.activiti.engine.impl.util.json.JSONArray;
 import org.activiti.engine.impl.util.json.JSONObject;
@@ -10,10 +11,23 @@ import java.io.StringWriter;
 import java.util.Map;
 
 public class MyListener implements TaskListener {
+
+    private Expression serviceName;
+
+    public Expression getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(Expression serviceName) {
+        this.serviceName = serviceName;
+    }
+
     @Override
     public void notify(DelegateTask delegateTask) {
 
         JSONObject obj = new JSONObject();
+
+        Object o=this.getServiceName().getValue(delegateTask);
 
         obj.put("Assignee",delegateTask.getAssignee());
    //     obj.put("Candidates",delegateTask.getCandidates());
@@ -25,7 +39,7 @@ public class MyListener implements TaskListener {
         obj.put("Name",delegateTask.getName());
         obj.put("TaskDefinitionKey",delegateTask.getTaskDefinitionKey());
         obj.put("EventName",delegateTask.getEventName());
-        obj.put("Description",delegateTask.getDescription());
+        obj.put("Description",this.getServiceName().getValue(delegateTask));
 
 
         JSONObject[] vars=new JSONObject[delegateTask.getVariables().size()];

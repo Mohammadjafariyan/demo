@@ -9,13 +9,16 @@
         <activiti:formProperty id="username" name="username" type="string" variable="username" required="true"></activiti:formProperty>
         <activiti:formProperty id="formName" type="string" variable="formName" required="true"></activiti:formProperty>
         <activiti:formProperty id="vacationType" name="vacationType" type="string" variable="vacationType" required="true"></activiti:formProperty>
-        <activiti:taskListener event="complete" class="listeners.MyListener"></activiti:taskListener>
+        <activiti:taskListener event="complete" class="listeners.MyListener">
+          <activiti:field name="serviceName">
+            <activiti:string><![CDATA[SampleTestServiceTask]]></activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
       </extensionElements>
     </userTask>
     <sequenceFlow id="sid-6B3A35C6-93B3-4FAA-962F-A0D080A48FA8" sourceRef="startEvent1" targetRef="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673"></sequenceFlow>
-    <exclusiveGateway id="sid-1757BCD1-8F0C-4B3C-AD1E-F7315BFE15F4"></exclusiveGateway>
-    <sequenceFlow id="sid-58CA2F16-A01D-4DED-89FC-89BABB77A2DF" sourceRef="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673" targetRef="sid-1757BCD1-8F0C-4B3C-AD1E-F7315BFE15F4"></sequenceFlow>
-    <userTask id="sid-B6451BFB-B586-433B-823E-41B9FAB685DE" name="حسابدار" activiti:candidateGroups="mali"></userTask>
+    <sequenceFlow id="sid-58CA2F16-A01D-4DED-89FC-89BABB77A2DF" sourceRef="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673" targetRef="sid-B6451BFB-B586-433B-823E-41B9FAB685DE"></sequenceFlow>
+    <userTask id="sid-B6451BFB-B586-433B-823E-41B9FAB685DE" name="حسابدار" default="sid-4B95CC60-457E-42D3-A1EA-F77CEF9147A4" activiti:candidateGroups="mali"></userTask>
     <userTask id="sid-75D58037-73ED-46B3-8DAD-54A1B9280103" name="مدیریت" activiti:candidateUsers="amin" activiti:formKey="vacationRequestVerification">
       <extensionElements>
         <activiti:formProperty id="accept" type="string" variable="accept" required="true"></activiti:formProperty>
@@ -23,49 +26,44 @@
     </userTask>
     <endEvent id="sid-33C9F48E-7BDF-4486-A22F-6E42C21DD315"></endEvent>
     <sequenceFlow id="sid-CBEDE3C7-3AD3-4718-BE3B-1DFE50332A8A" sourceRef="sid-75D58037-73ED-46B3-8DAD-54A1B9280103" targetRef="sid-33C9F48E-7BDF-4486-A22F-6E42C21DD315"></sequenceFlow>
-    <sequenceFlow id="sid-FEE7F031-8580-4EA6-9587-501AF5F3A4C0" sourceRef="sid-B6451BFB-B586-433B-823E-41B9FAB685DE" targetRef="sid-75D58037-73ED-46B3-8DAD-54A1B9280103">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${isApproved==true}]]></conditionExpression>
+    <exclusiveGateway id="sid-217FEEA9-34AD-442C-ADD3-FD1DDC9C6D77"></exclusiveGateway>
+    <sequenceFlow id="sid-4B95CC60-457E-42D3-A1EA-F77CEF9147A4" sourceRef="sid-B6451BFB-B586-433B-823E-41B9FAB685DE" targetRef="sid-217FEEA9-34AD-442C-ADD3-FD1DDC9C6D77"></sequenceFlow>
+    <sequenceFlow id="sid-2539BD41-BEDE-44AD-915C-DF8FF341CBE7" name="${vacationType==0}" sourceRef="sid-217FEEA9-34AD-442C-ADD3-FD1DDC9C6D77" targetRef="sid-75D58037-73ED-46B3-8DAD-54A1B9280103">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${vacationType==0}]]></conditionExpression>
     </sequenceFlow>
-    <sequenceFlow id="sid-0F41F539-C969-4F57-8B63-4904DEBCDE85" sourceRef="sid-1757BCD1-8F0C-4B3C-AD1E-F7315BFE15F4" targetRef="sid-B6451BFB-B586-433B-823E-41B9FAB685DE">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${vacationType==1 || vacationType==2}]]></conditionExpression>
-    </sequenceFlow>
-    <sequenceFlow id="sid-DBF598DC-6D82-43FE-8496-2878F3C4158B" sourceRef="sid-1757BCD1-8F0C-4B3C-AD1E-F7315BFE15F4" targetRef="sid-75D58037-73ED-46B3-8DAD-54A1B9280103">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${vacationType==3}]]></conditionExpression>
+    <sequenceFlow id="sid-B1AF39CF-EFBB-45C4-A9BF-97FB7F6B4EF0" name="${vacationType&gt;0}" sourceRef="sid-217FEEA9-34AD-442C-ADD3-FD1DDC9C6D77" targetRef="sid-33C9F48E-7BDF-4486-A22F-6E42C21DD315">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${vacationType>0}]]></conditionExpression>
     </sequenceFlow>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_vacationRequest">
-    <bpmndi:BPMNPlane bpmnElement="vacationRequest" id="BPMNPlane_vacationRequest">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_vacationRequest2">
+    <bpmndi:BPMNPlane bpmnElement="vacationRequest2" id="BPMNPlane_vacationRequest2">
       <bpmndi:BPMNShape bpmnElement="startEvent1" id="BPMNShape_startEvent1">
         <omgdc:Bounds height="30.0" width="30.0" x="90.0" y="150.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="sid-E0F9F514-7447-4A0B-A19C-AB1160E64673" id="BPMNShape_sid-E0F9F514-7447-4A0B-A19C-AB1160E64673">
         <omgdc:Bounds height="80.0" width="100.0" x="165.0" y="120.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="sid-1757BCD1-8F0C-4B3C-AD1E-F7315BFE15F4" id="BPMNShape_sid-1757BCD1-8F0C-4B3C-AD1E-F7315BFE15F4">
-        <omgdc:Bounds height="40.0" width="40.0" x="300.0" y="145.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="sid-B6451BFB-B586-433B-823E-41B9FAB685DE" id="BPMNShape_sid-B6451BFB-B586-433B-823E-41B9FAB685DE">
-        <omgdc:Bounds height="80.0" width="100.0" x="360.0" y="30.0"></omgdc:Bounds>
+        <omgdc:Bounds height="80.0" width="100.0" x="405.0" y="75.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="sid-75D58037-73ED-46B3-8DAD-54A1B9280103" id="BPMNShape_sid-75D58037-73ED-46B3-8DAD-54A1B9280103">
-        <omgdc:Bounds height="80.0" width="100.0" x="375.0" y="225.0"></omgdc:Bounds>
+        <omgdc:Bounds height="80.0" width="100.0" x="405.0" y="390.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="sid-33C9F48E-7BDF-4486-A22F-6E42C21DD315" id="BPMNShape_sid-33C9F48E-7BDF-4486-A22F-6E42C21DD315">
-        <omgdc:Bounds height="28.0" width="28.0" x="645.0" y="345.0"></omgdc:Bounds>
+        <omgdc:Bounds height="28.0" width="28.0" x="705.0" y="390.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-217FEEA9-34AD-442C-ADD3-FD1DDC9C6D77" id="BPMNShape_sid-217FEEA9-34AD-442C-ADD3-FD1DDC9C6D77">
+        <omgdc:Bounds height="40.0" width="40.0" x="435.0" y="225.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-B1AF39CF-EFBB-45C4-A9BF-97FB7F6B4EF0" id="BPMNEdge_sid-B1AF39CF-EFBB-45C4-A9BF-97FB7F6B4EF0">
+        <omgdi:waypoint x="467.3637440758294" y="252.63625592417063"></omgdi:waypoint>
+        <omgdi:waypoint x="707.00314101606" y="396.7836730589962"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="sid-58CA2F16-A01D-4DED-89FC-89BABB77A2DF" id="BPMNEdge_sid-58CA2F16-A01D-4DED-89FC-89BABB77A2DF">
-        <omgdi:waypoint x="265.0" y="162.38095238095238"></omgdi:waypoint>
-        <omgdi:waypoint x="300.90909090909093" y="164.0909090909091"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="sid-0F41F539-C969-4F57-8B63-4904DEBCDE85" id="BPMNEdge_sid-0F41F539-C969-4F57-8B63-4904DEBCDE85">
-        <omgdi:waypoint x="320.0" y="145.0"></omgdi:waypoint>
-        <omgdi:waypoint x="320.0" y="70.0"></omgdi:waypoint>
-        <omgdi:waypoint x="360.0" y="70.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="sid-DBF598DC-6D82-43FE-8496-2878F3C4158B" id="BPMNEdge_sid-DBF598DC-6D82-43FE-8496-2878F3C4158B">
-        <omgdi:waypoint x="320.0" y="185.0"></omgdi:waypoint>
-        <omgdi:waypoint x="320.0" y="265.0"></omgdi:waypoint>
-        <omgdi:waypoint x="375.0" y="265.0"></omgdi:waypoint>
+        <omgdi:waypoint x="265.0" y="160.0"></omgdi:waypoint>
+        <omgdi:waypoint x="335.0" y="160.0"></omgdi:waypoint>
+        <omgdi:waypoint x="335.0" y="130.0"></omgdi:waypoint>
+        <omgdi:waypoint x="405.0" y="130.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="sid-6B3A35C6-93B3-4FAA-962F-A0D080A48FA8" id="BPMNEdge_sid-6B3A35C6-93B3-4FAA-962F-A0D080A48FA8">
         <omgdi:waypoint x="120.0" y="165.0"></omgdi:waypoint>
@@ -73,14 +71,17 @@
         <omgdi:waypoint x="142.0" y="160.0"></omgdi:waypoint>
         <omgdi:waypoint x="165.0" y="160.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="sid-CBEDE3C7-3AD3-4718-BE3B-1DFE50332A8A" id="BPMNEdge_sid-CBEDE3C7-3AD3-4718-BE3B-1DFE50332A8A">
-        <omgdi:waypoint x="445.4255319148936" y="305.0"></omgdi:waypoint>
-        <omgdi:waypoint x="473.0" y="359.0"></omgdi:waypoint>
-        <omgdi:waypoint x="645.0" y="359.0"></omgdi:waypoint>
+      <bpmndi:BPMNEdge bpmnElement="sid-2539BD41-BEDE-44AD-915C-DF8FF341CBE7" id="BPMNEdge_sid-2539BD41-BEDE-44AD-915C-DF8FF341CBE7">
+        <omgdi:waypoint x="455.4483695652174" y="264.5516304347826"></omgdi:waypoint>
+        <omgdi:waypoint x="455.10840108401084" y="390.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="sid-FEE7F031-8580-4EA6-9587-501AF5F3A4C0" id="BPMNEdge_sid-FEE7F031-8580-4EA6-9587-501AF5F3A4C0">
-        <omgdi:waypoint x="413.0769230769231" y="110.0"></omgdi:waypoint>
-        <omgdi:waypoint x="421.9230769230769" y="225.0"></omgdi:waypoint>
+      <bpmndi:BPMNEdge bpmnElement="sid-CBEDE3C7-3AD3-4718-BE3B-1DFE50332A8A" id="BPMNEdge_sid-CBEDE3C7-3AD3-4718-BE3B-1DFE50332A8A">
+        <omgdi:waypoint x="505.0" y="425.07575757575756"></omgdi:waypoint>
+        <omgdi:waypoint x="705.0674049184362" y="405.37214951560856"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-4B95CC60-457E-42D3-A1EA-F77CEF9147A4" id="BPMNEdge_sid-4B95CC60-457E-42D3-A1EA-F77CEF9147A4">
+        <omgdi:waypoint x="455.0" y="155.0"></omgdi:waypoint>
+        <omgdi:waypoint x="455.0" y="225.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

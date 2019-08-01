@@ -1,5 +1,7 @@
 controllers\HomeController.class
 bootstrap\MyApplication$1.class
+service\RestfulClient.class
 bootstrap\MyApplication$2.class
+listeners\MyListener.class
 bootstrap\MyConfig.class
 bootstrap\MyApplication.class
