@@ -2,9 +2,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!--
+    class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+-->
 
     <bean id="processEngineConfiguration"
-          class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+          class="org.activiti.spring.SpringProcessEngineConfiguration">
 
         <property name="databaseType" value="mssql" />
         <property name="jdbcUrl" value="jdbc:sqlserver://localhost\SQLEXPRESS:1433;database=workflow" />
@@ -22,7 +25,12 @@
         <property name="jobExecutorActivate" value="true" />
 
         <property name="createDiagramOnDeploy" value="false" />
-
+<!--
+        <property name="deploymentResources" value="classpath*:/activiti/*.bpmn" />
+-->
+        <property name="deploymentMode" value="single-resource" />
     </bean>
+
+
 
 </beans>
